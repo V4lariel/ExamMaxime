@@ -3,4 +3,9 @@ form{
   margin-left: 500px;
   padding: 10px;
   border: 1px solid black;
+  background-color: rgba(91,120,142,0.7);
+}
+
+#spinner{
+  font-size: 60px;
 }

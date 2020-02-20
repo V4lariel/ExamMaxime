@@ -1,3 +1,6 @@
+<ng-container *ngIf="isLoading">
+  <div id="spinner"><fa-icon [spin]="true" [icon]="faSpinner"></fa-icon></div>
+</ng-container>
 <ng-container *ngIf="!isLoading">
   <h1>Notre boutique possède actuellement {{computers.length}} produits.</h1>
   <h2>Cliquez sur l'un d'entre eux pour le voir plus en détail.</h2>
@@ -38,5 +41,5 @@
     </tr>
     </tbody>
   </table>
-  <a [routerLink]="['/ajout']"><button class="btn btn-success">Ajouter un nouvel Ordinateur</button></a>
+  <a [routerLink]="['/ajout']"><button id="btnAddComputer" class="btn btn-secondary">Ajouter un nouvel Ordinateur</button></a>
 </ng-container>

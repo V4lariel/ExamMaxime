@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Computer} from "../../models/computer";
 import {ComputerService} from "../../services/computer.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {faSpinner} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-edit-computer',
@@ -10,6 +11,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class EditComputerComponent implements OnInit {
   isLoading: boolean;
+  faSpinner = faSpinner;
   computerForm: Computer;
   marqueDisponible: string[];
   typeDisponible: string[];

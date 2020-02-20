@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Computer} from "../../models/computer";
-import {faEdit, faTrash} from "@fortawesome/free-solid-svg-icons";
+import {faEdit, faSpinner, faTrash} from "@fortawesome/free-solid-svg-icons";
 import {ComputerService} from "../../services/computer.service";
 import {ActivatedRoute, Router} from "@angular/router";
 
@@ -14,6 +14,7 @@ export class ComputerDetailsComponent implements OnInit {
   computers: Computer[];
   faEdit = faEdit;
   faTrash = faTrash;
+  faSpinner = faSpinner;
   constructor(private computerService: ComputerService,
               private route: ActivatedRoute,
               private router: Router) { }

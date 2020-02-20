@@ -2,3 +2,11 @@ table{
   max-width: 1000px;
   margin-left: 280px;
 }
+
+#btnAddComputer{
+  margin-left: 280px;
+}
+
+#spinner{
+  font-size: 60px;
+}
