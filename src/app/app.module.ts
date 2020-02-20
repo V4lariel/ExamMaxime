@@ -9,6 +9,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddComputerComponent } from './components/add-computer/add-computer.component';
 import { EditComputerComponent } from './components/edit-computer/edit-computer.component';
 import { ComputerDetailsComponent } from './components/computer-details/computer-details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ComputerDetailsComponent } from './components/computer-details/computer
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
