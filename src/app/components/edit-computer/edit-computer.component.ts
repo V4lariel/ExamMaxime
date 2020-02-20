@@ -19,12 +19,12 @@ export class EditComputerComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.isLoading = true;
     this.marqueDisponible = this.computerService.marqueDisponible;
     this.typeDisponible = this.computerService.typeDisponible;
     this.categoryDisponible = this.computerService.categoryDisponible;
     this.computerService.getComputerByID(+this.route.snapshot.paramMap.get('id')).subscribe((data) => {
-      this.router.navigate(['/dashboard'])
+      this.computerForm = data;
+      this.isLoading = false;
     });
   }
   onSubmit() {

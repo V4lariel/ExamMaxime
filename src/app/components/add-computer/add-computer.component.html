@@ -1,6 +1,6 @@
 <div class="container-fluid">
+  <br>
   <form #validationComputer='ngForm' (ngSubmit)="onSubmit()">
-
     <div class="form-group">
       <label for="model">Modèle du PC :</label>
       <input type="text" class="form-control" id="model" name="model" required [(ngModel)]="computerForm.model" #model="ngModel">
@@ -52,7 +52,7 @@
 
     <div class="form-group">
       <label for="dateEntree">Date d'acquisition du PC :</label>
-      <input type="date" class="form-control" id="dateEntree" name="dateEntree" required [(ngModel)]="computerForm.dateEntree" #dateEntree="ngModel">
+      <input  type="date" class="form-control" id="dateEntree" name="dateEntree" required [(ngModel)]="computerForm.dateEntree" #dateEntree="ngModel">
       <div [hidden]="dateEntree.valid" class="alert alert-danger">Veuillez renseigner la date d'acquisition de l'ordinateur</div>
     </div>
 

@@ -1,7 +1,8 @@
 <ng-container *ngIf="!isLoading">
   <h1>Notre boutique possède actuellement {{computers.length}} produits.</h1>
   <h2>Cliquez sur l'un d'entre eux pour le voir plus en détail.</h2>
-  <table class="table">
+
+  <table class="table table-hover table-dark">
 
     <thead>
     <tr>
@@ -15,7 +16,7 @@
     <tr *ngFor="let computer of computers">
       <th scope="row">{{computer.id}}</th>
       <td>{{computer.model}}</td>
-      <td><a [routerLink]="['/computer/', computer.id]">En savoir plus</a></td>
+      <td><a routerLink="/computer/:id">En savoir plus</a></td>
     </tr>
     </tbody>
   </table>

@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent },
   {path: 'ajout', component: AddComputerComponent},
-  { path: 'edit/:id', component: EditComputerComponent},
+  { path: 'computer/edit/:id', component: EditComputerComponent},
   { path: 'computer/:id', component: ComputerDetailsComponent },
 
 ];
