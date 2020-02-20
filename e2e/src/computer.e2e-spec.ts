@@ -8,7 +8,7 @@ describe('Test de l\'ajout d\'un ordinateur', () => {
 
   beforeEach(() => {
     page = new ComputerPage();
-    browser.get('http://localhost:4202/dashboard');
+    browser.get('/dashboard');
   });
 
   it('Vérifier le nombre de ligne dans le tableau et la navigation vers la bonne url', () => {
