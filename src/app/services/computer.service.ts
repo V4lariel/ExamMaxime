@@ -36,4 +36,12 @@ apiURL = 'http://localhost:3000/computers';
   add(computer: Computer): Observable<Computer> {
     return this.http.post<Computer>(this.apiURL, computer).pipe(retry(1), catchError(this.handleError))
   }
+  edit(computerToEdit: Computer): Observable<Computer> {
+    return this.http.put<Computer>(this.apiURL+'/'+computerToEdit.id, computerToEdit).pipe(retry(1), catchError(this.handleError)
+    );
+  }
+  delete(id: number): Observable<Computer>  {
+    return this.http.delete<Computer>(this.apiURL+'/'+ id).pipe(retry(1), catchError(this.handleError)
+    );
+  }
 }

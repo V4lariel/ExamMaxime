@@ -13,6 +13,8 @@
       <th scope="col">Prix d'Achat</th>
       <th scope="col">Prix de Vente</th>
       <th scope="col">Date d'Entrée</th>
+      <th scope="col">Indice de rentabilité</th>
+      <th scope="col">Gérer</th>
     </tr>
     </thead>
 
@@ -25,11 +27,16 @@
       <td>{{computer.category}}</td>
       <td>{{computer.pxAchat}}</td>
       <td>{{computer.pxVente}}</td>
-      <td>{{computer.dateEntree}}</td>
+      <td>{{computer.dateEntree | date: 'dd/MM/yyyy' }}</td>
+      <td>{{computer.pxVente - computer.pxAchat | number}}</td>
+      <a [routerLink]="['/edit', computer.id]">
+        <fa-icon [icon]="faEdit"></fa-icon>
+      </a>
+      <a (click)="deleteComputer(computer.id)" style="margin-left: 10px; color: red; cursor: pointer;">
+        <fa-icon [icon]="faTrash"></fa-icon>
+      </a>
     </tr>
     </tbody>
   </table>
-  <a [routerLink]="['/ajout']">
-    <button class="btn btn-success">Ajouter un nouvel Ordinateur</button>
-  </a>
+  <a [routerLink]="['/ajout']"><button class="btn btn-success">Ajouter un nouvel Ordinateur</button></a>
 </ng-container>

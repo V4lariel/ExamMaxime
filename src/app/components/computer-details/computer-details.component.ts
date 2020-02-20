@@ -25,5 +25,9 @@ export class ComputerDetailsComponent implements OnInit {
       this.isLoading = false;
     })
   }
-
+  deleteComputer(id: number) {
+    this.computerService.delete(id).subscribe(data => {
+      this.router.navigate(['dashboard']);
+    });
+  }
 }

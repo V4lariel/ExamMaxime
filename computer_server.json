@@ -8,16 +8,6 @@
       "category": "Bureautique",
       "pxAchat": 120.88,
       "pxVente": 300.1
-    },
-    {
-      "id": 2,
-      "model": "FX550J",
-      "marque": "Asus",
-      "type": "Portable",
-      "category": "Gaming",
-      "pxAchat": 1500.99,
-      "pxVente": 2000,
-      "dateEntree": "2020-02-20"
     }
   ]
 }
