@@ -5,14 +5,20 @@ export class ComputerPage {
     browser.driver.sleep(5000);
   }
   completeForm() {
-    let nom = element.all(by.id('nom'));
-    let marque = element.all(by.id('inputRadio-Nike'));
+    let model = element.all(by.id('model'));
+    let marque = element.all(by.id('input-radio-Asus'));
     let type = element.all(by.name('type'));
-    let taille = element.all(by.name('taille'));
-    nom.sendKeys('test add e2e');
+    let category = element.all(by.id('input-radio-Gaming'));
+    let pxAchat = element.all(by.id('pxAchat'));
+    let pxVente = element.all(by.id('pxVente'));
+    let dateEntree = element.all(by.id('dateEntree'));
+    model.sendKeys('X550J');
     marque.click();
-    type.sendKeys('Sport');
-    taille.sendKeys(45.5);
+    type.sendKeys('Portable');
+    category.click();
+    pxAchat.sendKeys(1500)
+    pxVente.sendKeys(1999.99)
+    dateEntree.sendKeys("20.02.2020")
   }
 
 }
