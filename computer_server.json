@@ -15,46 +15,6 @@
       "marque": "Asus",
       "type": "Portable",
       "category": "Gaming",
-      "pxAchat": 1000,
-      "pxVente": 1999.99,
-      "dateEntree": "2020-02-20"
-    },
-    {
-      "id": 3,
-      "model": "X550J",
-      "marque": "Asus",
-      "type": "Portable",
-      "category": "Gaming",
-      "pxAchat": 1500,
-      "pxVente": 1999.99,
-      "dateEntree": "2020-02-20"
-    },
-    {
-      "id": 4,
-      "model": "X550J",
-      "marque": "Asus",
-      "type": "Portable",
-      "category": "Gaming",
-      "pxAchat": 1500,
-      "pxVente": 1999.99,
-      "dateEntree": "2020-02-20"
-    },
-    {
-      "id": 5,
-      "model": "X550J",
-      "marque": "Asus",
-      "type": "Portable",
-      "category": "Gaming",
-      "pxAchat": 1500,
-      "pxVente": 1999.99,
-      "dateEntree": "2020-02-20"
-    },
-    {
-      "id": 6,
-      "model": "X550J",
-      "marque": "Asus",
-      "type": "Portable",
-      "category": "Gaming",
       "pxAchat": 1500,
       "pxVente": 1999.99,
       "dateEntree": "2020-02-20"

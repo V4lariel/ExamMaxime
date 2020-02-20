@@ -12,7 +12,7 @@ export class ComputerPage {
     let pxAchat = element.all(by.id('pxAchat'));
     let pxVente = element.all(by.id('pxVente'));
     let dateEntree = element.all(by.id('dateEntree'));
-    model.sendKeys('X550J');
+    model.sendKeys('FX550J');
     marque.click();
     type.sendKeys('Portable');
     category.click();
