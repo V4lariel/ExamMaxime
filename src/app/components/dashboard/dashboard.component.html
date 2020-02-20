@@ -15,7 +15,7 @@
     <tr *ngFor="let computer of computers">
       <th scope="row">{{computer.id}}</th>
       <td>{{computer.model}}</td>
-      <td><a>En savoir plus</a></td>
+      <td><a routerLink="/computer/:id">En savoir plus</a></td>
     </tr>
     </tbody>
   </table>

@@ -1,1 +1,62 @@
-<p>add-computer works!</p>
+<div class="container-fluid">
+  <form #validationComputer='ngForm' (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="model">Modèle du PC :</label>
+      <input type="text" class="form-control" id="model" name="model" required [(ngModel)]="computerForm.model" #model="ngModel">
+      <div [hidden]="model.valid" class="alert alert-danger">Veuillez renseigner le modèle de l'ordinateur</div>
+    </div>
+
+    <div class="form-group">
+      <label>Marque du PC :</label>
+      <ng-container *ngFor="let marque of marqueDisponible">
+        <div>
+          <input type="radio" id="input-radio-{{marque}}" #marqueValidation='ngModel' name="marque" [value]="marque" required [(ngModel)]="computerForm.marque">
+          <label for="input-radio-{{marque}}">{{marque}}</label>
+        </div>
+      </ng-container>
+      <div [hidden]="validationComputer.controls.marque?.valid" class="alert alert-danger">Veuillez renseigner la marque de l'ordinateur</div>
+    </div>
+
+    <div class="form-group">
+      <label>Type de PC</label> <br>
+      <select #type="ngModel" name="type" [(ngModel)]="computerForm.type" required class="form-control">
+        <option></option>
+        <option *ngFor="let type of typeDisponible">{{ type }}</option>
+      </select>
+      <div [hidden]="type.valid" class="alert alert-danger">Veuillez renseigner le type de l'ordinateur</div>
+    </div>
+
+    <div class="form-group">
+      <label>Catégorie du PC :</label>
+      <ng-container *ngFor="let category of categoryDisponible">
+        <div>
+          <input type="radio" id="input-radio-{{category}}" #marqueValidation='ngModel' name="category" [value]="category" required [(ngModel)]="computerForm.category">
+          <label for="input-radio-{{category}}">{{category}}</label>
+        </div>
+      </ng-container>
+      <div [hidden]="validationComputer.controls.category?.valid" class="alert alert-danger">Veuillez renseigner la catégorie de l'ordinateur</div>
+    </div>
+
+    <div class="form-group">
+      <label for="pxAchat">Prix d'achat du PC :</label>
+      <input type="number" class="form-control" id="pxAchat" name="pxAchat" required [(ngModel)]="computerForm.pxAchat" #pxAchat="ngModel">
+      <div [hidden]="pxAchat.valid" class="alert alert-danger">Veuillez renseigner le prix d'achat de l'ordinateur</div>
+    </div>
+
+    <div class="form-group">
+      <label for="pxVente">Prix de vente du PC :</label>
+      <input type="number" class="form-control" id="pxVente" name="pxVente" required [(ngModel)]="computerForm.pxVente" #pxVente="ngModel">
+      <div [hidden]="pxVente.valid" class="alert alert-danger">Veuillez renseigner le prix de vente de l'ordinateur</div>
+    </div>
+
+    <div class="form-group">
+      <label for="dateEntree">Date d'acquisition du PC :</label>
+      <input type="date" class="form-control" id="dateEntree" name="dateEntree" required [(ngModel)]="computerForm.dateEntree" #dateEntree="ngModel">
+      <div [hidden]="dateEntree.valid" class="alert alert-danger">Veuillez renseigner la date d'acquisition de l'ordinateur</div>
+    </div>
+
+    <input id="submitFormComputer" [disabled]="!validationComputer.valid" type="submit" class="btn btn-success" value="Soumettre">
+
+  </form>
+</div>

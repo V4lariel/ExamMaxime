@@ -30,5 +30,10 @@ apiURL = 'http://localhost:3000/computers';
   getAllComputers(): Observable<Computer[]> {
     return this.http.get<Computer[]>(this.apiURL).pipe(retry(1), catchError(this.handleError))
   }
-
+  getComputerByID(id: number): Observable<Computer> {
+    return this.http.get<Computer>(this.apiURL +'/'+ id).pipe(retry(1), catchError(this.handleError))
+  }
+  add(computer: Computer): Observable<Computer> {
+    return this.http.post<Computer>(this.apiURL, computer).pipe(retry(1), catchError(this.handleError))
+  }
 }
